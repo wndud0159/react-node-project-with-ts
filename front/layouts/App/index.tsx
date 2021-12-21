@@ -1,8 +1,10 @@
 import React from 'react';
 import loadable from '@loadable/component';
 import { Switch, Route, Redirect } from 'react-router-dom';
-const Login = loadable(() => import('../pages/Login'));
-const SignUp = loadable(() => import('../pages/SignUp'));
+// 코드 스플리팅
+const Login = loadable(() => import('@pages/Login'));
+const SignUp = loadable(() => import('@pages/SignUp'));
+const Workspace = loadable(() => import('@layouts/Workspace'));
 
 const App = () => {
   return (
@@ -10,6 +12,7 @@ const App = () => {
       <Redirect exact path="/" to="/login"></Redirect>
       <Route path="/login" component={Login}></Route>
       <Route path="/signup" component={SignUp}></Route>
+      <Route path="/workspace" component={Workspace}></Route>
     </Switch>
   );
 };
