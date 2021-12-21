@@ -3,7 +3,11 @@ import { ChatZone, Section, StickyHeader } from '@components/ChatList/styles';
 import React, { useCallback, forwardRef, RefObject, MutableRefObject } from 'react';
 
 const ChatList = () => {
-  return <div>ChatList</div>;
+  return (
+    <ChatZone>
+      <Section>section</Section>
+    </ChatZone>
+  );
 };
 
 export default ChatList;

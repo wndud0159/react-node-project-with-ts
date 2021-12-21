@@ -12,7 +12,8 @@ const App = () => {
       <Redirect exact path="/" to="/login"></Redirect>
       <Route path="/login" component={Login}></Route>
       <Route path="/signup" component={SignUp}></Route>
-      <Route path="/workspace" component={Workspace}></Route>
+      {/* route parameter (:foo)*/}
+      <Route path="/workspace/:workspace" component={Workspace}></Route>
     </Switch>
   );
 };
