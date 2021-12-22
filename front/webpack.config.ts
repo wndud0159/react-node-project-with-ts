@@ -62,7 +62,7 @@ const config: webpack.Configuration = {
     new ForkTsCheckerWebpackPlugin({
       async: false,
       // eslint: {
-      //   files: "./src/**/*",
+      //   files: './src/**/*',
       // },
     }),
     new webpack.EnvironmentPlugin({ NODE_ENV: isDevelopment ? 'development' : 'production' }),
