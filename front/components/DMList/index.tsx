@@ -38,7 +38,7 @@ const DMList: FC = () => {
     socket?.on('onlineList', (data: number[]) => {
       setOnlineList(data);
     });
-    console.log(`onlinelist${onlineList}`);
+    // console.log(`onlinelist${onlineList}`);
     // socket?.on('dm', onMessage);
     // console.log('socket on dm', socket?.hasListeners('dm'), socket);
     return () => {
